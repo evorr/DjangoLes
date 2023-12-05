@@ -1,0 +1,13 @@
+{% extends 'sem3/base.html' %}
+
+{% block title %}About{% endblock %}
+{% block content %}
+  <h1>We celebrate halloween</h1>
+  <h2>On November, 4</h2>
+  <ul>
+    <li>Need mask</li>
+    <li>Need haircut</li>
+    <li>Now is {{ datetime }}</li>
+    <li>You visited this site from IP {{ client_ip }}</li>
+  </ul>
+{% endblock %}

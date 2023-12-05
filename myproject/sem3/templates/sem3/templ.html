@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<body>
+   {% for article in articles %}
+     {% if article.public_date %}
+       <a href="article/{{ article.id }}/">{{ article.head }}</a>
+     {% else %}
+       <p>{{ article.head }}</p>
+     {% endif %}
+   {% endfor %}
+</body>
+</html>
