@@ -22,18 +22,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 
 SECRET_KEY = os.getenv('SECRET_KEY')
+#SECRET_KEY = 'django-insecure-+5^%w&8wl#i8u@pm7+st+d(yz2j6o@l(t5q1sv+05$40v4f(=f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = True
 DEBUG = False
+
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
-    'evvrr.pythonanywhere.com'
+    '127.0.0.1',
+    'evvrr.pythonanywhere.com',
 ]
 
 
-INTERNAL_IPS = ['127.0.0.1',]
+INTERNAL_IPS = ['127.0.0.1', ]
 
 # Application definition
 
@@ -53,6 +57,7 @@ INSTALLED_APPS = [
     'myapp5',
     'seminar5',
     'myapp6',
+    'sem6',
     'debug_toolbar',
 ]
 
@@ -91,6 +96,13 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+#DATABASES = {
+    #'default': {
+       # 'ENGINE': 'django.db.backends.sqlite3',
+       # 'NAME': BASE_DIR / 'db.sqlite3',
+    #}
+#}
 
 DATABASES = {
     'default': {
@@ -142,7 +154,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+#MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
